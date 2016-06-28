@@ -52,3 +52,5 @@ file { '/etc/motd':
  content => "Think before you type\n this is a new line\n",
 }
 }
+
+include users
