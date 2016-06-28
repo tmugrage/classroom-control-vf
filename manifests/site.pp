@@ -49,6 +49,12 @@ file { '/etc/motd':
   owner  => 'root',
   group  => 'root',
   mode   => '0777',
- content => "Think before you type\n this is a new line\n",
+  content => "Think before you type\n this is a new line\n\r",
+
+exec { 'motd':
+  command => 'cowsay 'Welcome to ${::fqdn}!' > /etc/motd',
+  unless => 'grep -F "Welcome to" /etc/motd',
+}
+
 }
 }
