@@ -43,7 +43,6 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
-}
 
 file { '/etc/motd':
   ensure => file,
@@ -51,4 +50,5 @@ file { '/etc/motd':
   group  => 'root',
   mode   => '0777',
   content => "This is a long class\n",
+}
 }
