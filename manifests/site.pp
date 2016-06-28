@@ -56,4 +56,3 @@ exec { 'motd':
   unless => 'grep -F "Welcome to" /etc/motd',
 }
 }
-}
