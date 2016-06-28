@@ -49,6 +49,6 @@ file { '/etc/motd':
   owner  => 'root',
   group  => 'root',
   mode   => '0777',
-  content => "This is a long class\n",
+ content => "Think before you type\n this is a new line\n",
 }
 }
