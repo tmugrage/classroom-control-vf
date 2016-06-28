@@ -45,4 +45,10 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
 }
 
-notify { "Hello, my name is ${::hostname}": }
+file { '/etc/motd':
+  ensure => file,
+  owner  => 'root',
+  group  => 'root',
+  mode   => '0777',
+  content => 'This is a long class',
+}
