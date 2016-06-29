@@ -9,7 +9,7 @@ class memcached {
   service { 'memcached':
     enable => true,
     ensure => running,
-    require => Package ['memcached']
+    require => Package['memcached'],
 }
   file { '/etc/sysconfig/memcached':
     ensure => file,
