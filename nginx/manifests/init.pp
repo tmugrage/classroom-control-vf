@@ -6,8 +6,8 @@ class nginx {
 file { 'docroot':
   ensure => directory,
   path   => '/var/www',
-  owner  => owner,
-  group  => group,
+    owner   => 'root',
+    group   => 'root',
   mode   => 0775,
   }
 
@@ -24,8 +24,8 @@ file { 'docroot':
 file { 'default.conf':
   ensure => file,
   path   => '/etc/nginx/conf.d/default.conf',
-  owner  => owner,
-  group  => group,
+    owner   => 'root',
+    group   => 'root',
   mode   => 0664,
   source => 'puppet:///modules/nginx/default.conf';
   require => Package['nginx'],
@@ -34,8 +34,8 @@ file { 'default.conf':
 file { 'nginx.conf':
   ensure => file,
   path   => '/etc/nginx/nginx.conf',
-  owner  => owner,
-  group  => group,
+    owner   => 'root',
+    group   => 'root',
   mode   => 0664
   source => 'puppet:///modules/nginx/nginx.conf',
   require => [Package['nginx'],File['docroot']],
