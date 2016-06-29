@@ -11,11 +11,12 @@ class memcached {
     ensure => running,
     require => Package['memcached'],
 }
-  file { '/etc/sysconfig/memcached':
+  file { 'memcached':
     ensure => file,
+    path => '/etc/sysconfig/memcached'
     owner  => root,
     group  => root,
-    mode   => 0644,
-    content => 'PORT="11211"\n\rUSER="memcached"\n\rMAXCONN="96"\n\rCACHESIZE="32"\n\rOPTIONS= ""\n\r',
+    mode   => 0664,
+    source => 'puppet:///modules/memcached/sysconfig',
   }
 }
