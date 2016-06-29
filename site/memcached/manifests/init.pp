@@ -4,11 +4,12 @@
 class memcached {
   # resources
   package { 'memcached':
-    ensure => 'installed',
+    ensure => 'present',
   }
   service { 'memcached':
     enable => true,
     ensure => running,
+    require => Package ['memcached']
 }
   file { '/etc/sysconfig/memcached':
     ensure => file,
