@@ -48,7 +48,6 @@ node default {
   include nginx
  
     if $::is_virtual {
-        notice ('This is a ${vmname} virtual machine.')
         $vmname = capitalize($::virtual)
         notify { 'This is a ${vmname} virtual machine.': } 
     }
