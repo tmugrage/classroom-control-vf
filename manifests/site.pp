@@ -57,6 +57,9 @@ node default {
     }
   # notify { "Hello, my name is ${::hostname}": }
 
+$message = hiera('message')
+notify { $message: }
+
 file { '/etc/motd':
   ensure => file,
   owner  => 'root',
