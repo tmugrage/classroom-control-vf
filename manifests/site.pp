@@ -51,7 +51,6 @@ node default {
   nginx::vhost { 'pizza.puppetlabs.vm': }
   nginx::vhost { 'droidmagic.com': }
   
- 
     if $::is_virtual {
         $vmname = capitalize($::virtual)
         notify { "This is a ${vmname} virtual machine.": } 
