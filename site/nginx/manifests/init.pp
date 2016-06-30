@@ -44,10 +44,10 @@ class nginx {
   }
 
   # manage the default docroot, index, and conf--replaces several resources
-  nginx::vhost { 'default':
-    docroot    => $docroot,
-    servername => $::fqdn,
-  }
+  #nginx::vhost { 'default':
+  #  docroot    => $docroot,
+  #  servername => $::fqdn,
+  #}
 
   file { "${confdir}/nginx.conf":
     ensure  => file,
