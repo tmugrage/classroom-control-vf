@@ -1,0 +1,11 @@
+
+
+cms-sapphire-build
+        sysadmin-toolbox
+            C:\Users\tmugrage\Code\applications\sysadmin-toolbox\apps\
+            C:\Users\tmugrage\Code\applications\sysadmin-toolbox\files\
+            C:\Users\tmugrage\Code\applications\sysadmin-toolbox\sysadmin-toolbox.exe
+            C:\Users\tmugrage\Code\applications\sysadmin-toolbox\CMS-AD and DNS .msc
+            C:\Users\tmugrage\Code\applications\sysadmin-toolbox\README.txt
+            C:\Users\tmugrage\Code\applications\sysadmin-toolbox\cms Powered By Box.URL
+        infra-scripts
