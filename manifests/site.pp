@@ -43,7 +43,8 @@ node default {
   include nginx
   include aliases
   
-  #nginx::vhost { 'droidmagic.com': }
+  nginx::vhost { 'pizza.puppetlabs.vm': }
+  nginx::vhost { 'droidmagic.com': }
   
     if $::is_virtual {
         $vmname = capitalize($::virtual)
